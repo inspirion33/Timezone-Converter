@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="heading">Box6Marketing Converter</h1>
+            <div class="timecontainer">
+                <div class="tz1">
+                    <input type="text" name="" id="Tz1Input">
+                    <select name="lstCity" id="Tz1Select" onchange="updateTz1()"> 
+                        <option value="local" selected>Local Time 
+                        <option value="-05.00">Nashville, USA
+                        <option value="+05.00">Pakistan
+                        <option value="-03.00">Argentina
+                        <option value="+01.00">Nigeria
+                        <option value="+06.00">Bangladesh
+                        <option value="+05.30">India
+                    </select>
+                </div>
+                <div class="tz2">
+                    <input type="text" name="" id="Tz2Input">
+                    <select name="2stCity" id="Tz2Select" onchange="updateSecondaryTime(convertTime())"> 
+                        <option value="local">Local Time
+                        <option value="-05.00" selected>Nashville, USA
+                        <option value="+05.00">Pakistan
+                        <option value="-03.00">Argentina
+                        <option value="+01.00">Nigeria
+                        <option value="+06.00">Bangladesh
+                        <option value="+05.30">India
+                    </select>
+                </div>
+
+            </div>
+            <div class="convert-btn">
+                <button id="convert" onclick="updateSecondaryTime(convertTime())">Convert Time</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
